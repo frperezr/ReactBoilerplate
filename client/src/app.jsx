@@ -7,6 +7,12 @@ import { browserHistory, Router } from 'react-router';
 import routes from './routes.js';
 
 // remove tap delay, essential for MaterialUI to work properly
+// Load foundation
+require('style-loader!css-loader!foundation-sites/dist/css/foundation-float.min.css');
+$(document).foundation();
+
+// App css
+require('style-loader!css-loader!sass-loader!applicationStyles');
 injectTapEventPlugin();
 
 ReactDom.render((
